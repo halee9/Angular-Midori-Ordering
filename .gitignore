@@ -1,4 +1,4 @@
-.openshift
-node_modules
-public/img
-public/images
+.openshift/
+node_modules/
+public/img/
+public/images/
