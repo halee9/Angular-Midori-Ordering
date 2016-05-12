@@ -1,0 +1,4 @@
+.openshift
+node_modules
+public/img
+public/images
