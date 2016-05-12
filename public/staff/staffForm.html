@@ -1,0 +1,19 @@
+<form name="staffForm" ng-submit="submitForm(staffForm.$valid)" novalidate>
+
+    <hs-form-text label="Name" name="name" ng-model="staff.name" form="staffForm"></hs-form-text>
+    <hs-form-email label="Email" name="email" ng-model="staff.email" form="staffForm.email"></hs-form-email>
+    <hs-form-phone label="Phone" name="phone" ng-model="staff.phone" form="staffForm.phone"></hs-form-phone>
+    <hs-form-passcode label="passcode" name="passcode" ng-model="staff.passcode" form="staffForm.passcode"></hs-form-passcode>
+    <hs-form-boolean label="Active" name="active" ng-model="staff.active" form="staffForm.active"></hs-form-boolean>
+
+    <button type="submit" class="btn btn-primary btn-block btn-lg" ng-disabled="staffForm.$invalid">
+        <i class="fa fa-save"></i> {{submitText}}
+    </button>
+    <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="delete()" ng-show="staff._id">
+        <span ng-hide="remove"><i class="fa fa-trash-o"></i> Delete</span>
+        <span ng-show="remove">Are you really remove this?</span>
+    </button>
+    <button type="button" class="btn btn-default btn-block btn-lg" ui-sref="staff.list">
+        <i class="fa fa-undo"></i> Back to list
+    </button>
+</form>

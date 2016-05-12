@@ -1,0 +1,13 @@
+                    { "name": "Chicken & Gyoza", "price": "9.49", "sku": "MC01" },
+                    { "name": "Chicken & Eggroll", "price": "9.49", "sku": "MC01" },
+                    { "name": "Chicken & Beef", "price": "9.99", "sku": "MC02" },
+                    { "name": "Chicken & Pork", "price": "9.99", "sku": "MC03" },
+                    { "name": "Chicken & Katsu", "price": "9.99", "sku": "MC04" }
+            {
+                "gname": "SMALL BOWL",
+                "menus": [
+                    { "name": "Chicken Bowl", "price": "4.99" },
+                    { "name": "Beef Bowl", "price": "5.99" },
+                    { "name": "Pork Bowl", "price": "5.99" }
+                ]
+            },

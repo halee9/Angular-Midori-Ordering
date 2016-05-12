@@ -1,0 +1,41 @@
+<div class="menuboard flex-container">
+    <div ng-repeat="colume in menus" class="colume">
+        <div ng-repeat="group in colume.colume" class="group">
+            <div class="group_name">
+                <i class="fa fa-ellipsis-v grey"></i><i class="fa fa-ellipsis-v grey"></i>
+                <span> {{ group.gname }}</span>
+            </div>
+            <div class="group_items">
+                <div ng-repeat="menu in group.menus" class="group_item">
+                    <div ng-class-odd="'odd'" ng-class-even="'even'">
+                        <div ng-if="menu.name=='Divider'">
+                            <hr>
+                        </div>
+                        <div ng-if="!(menu.name=='Divider') && !(menu.name=='Caption')">
+                            <div class="pull-right price">{{ menu.price }}</div>
+                            <div class="menu_name" ng-class="{spicy: menu.spicy}">
+                                <span>{{ menu.name }}</span>
+                                <span class="caption"> {{ menu.caption }}</span>
+                            </div>
+                        </div>
+                        <div ng-if="(menu.name=='Caption')">
+                            <div class="caption text-right">{{ menu.caption }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="slider">
+    <uib-carousel interval="5000">
+        <uib-slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="/img/slider/{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <span class="slide_name">{{slide.title}}</span>
+            </div>
+        </uib-slide>
+    </uib-carousel>
+</div>
+-->

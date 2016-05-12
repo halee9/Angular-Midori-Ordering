@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label>{{label}}:</label>
+    <div class="checkbox" ng-repeat="item in list">
+        <label>
+            <input type="checkbox" ng-model="checkboxModel[item._id]">
+            {{item.name}}
+        </label>
+    </div>
+</div>

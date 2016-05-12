@@ -1,0 +1,89 @@
+<div class="flex-layout">
+
+<div class="leftside">
+    <section>
+        <div class="pull-right" ui-sref="cart.menu"><i class="fa fa-th"></i> Menu</div>
+        <h4 ng-show="cart.number">Order No: {{cart.number}}
+        <h4 ng-hide="cart.number">New Order</h4>
+        <h1 class="underline" ui-sref="cart.payment">
+            <!--<i class="fa fa-shopping-cart"></i>-->
+            <i class="fa fa-shopping-cart"></i>
+            <span class="pull-right">{{cart.total | currency}}</span>
+        </h1>
+        <div>
+            <div ui-sref="cart.menu" ng-hide="cart.items[0]" class="text-center underline">
+                <h4>No item in the cart!</h4>
+            </div>
+            <div ng-repeat="item in cart.items track by $index" ng-init="item.selected=false" ng-class="{disabled: item.payment_completed, selected: item.selected, unselected: !item.selected}" ui-sref="cart.modifier({itemId: item._id})" class="clear underline" ng-click="deleteSelected(); item.selected=true;">
+                <h4>
+                    <strong>{{ item.name }}</strong>
+                    <span class="pull-right">{{ item.price | currency }}</span>
+                </h4>
+                <h6>{{ item.modifiers | displayModifiers }}</h6>
+            </div>
+            <!--
+            <div ng-repeat="item in cart.items track by $index" ui-sref="cart.modifier({itemId: item._id})" class="clear underline" ng-click="deleteSelected(); item.selected=true;">
+                <hs-view-item item="item"></hs-view-item>
+            </div>
+        -->
+            <div ui-sref="cart.menu" class="text-center underline xs-only">
+                <h4><i class="fa fa-cart-plus"></i> Add Another Item</h4>
+            </div>
+        </div>
+        <div class="underline full padding">
+            <button class="btn btn-lg" ng-click="removeAll()" ng-show="cart.items.length"><i class="fa fa-trash"></i> Remove All</button>
+            <hs-show-totals subtotal="cart.subtotal" tax="cart.tax" total="cart.total" ><hs-show-totals>
+        </div>
+        <div>
+            <div ui-sref="cart.customer">
+                <div>Customer: {{cart.username}}</div>
+                <div>Pick-up at {{cart.pickupTime | date: 'shortTime'}}</div>
+            </div>
+            <div ng-repeat="payment in payments">
+                <div>Payment Method: {{payment.method}}</div>
+                <div ng-show="payment.received>0">Received: {{payment.received}}</div>
+                <div ng-show="payment.changed>0">Changed: {{payment.changed}}</div>
+            </div>
+        </div>
+    </section>
+    <section class="clear">
+        <br>
+        <div>
+            <div>
+                <span>Dining Type : </span>
+                <span class="pull-right">{{ cart.diningType }}</span>
+            </div>
+            <div class="btn-group btn-group-justified" role="group">
+                <a type="button" class="btn btn-primary btn-lg" ng-repeat="diningType in diningTypes" ng-model="cart.diningType" uib-btn-radio="diningType.name">
+                    <i class="{{diningType.icon}}"></i>&nbsp;{{diningType.name}}
+                </a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <span>Incoming Type : </span>
+                <span class="pull-right">{{ cart.incomingType }}</span>
+            </div>
+            <div class="btn-group btn-group-justified" role="group">
+                <a type="button" class="btn btn-primary btn-lg" ng-repeat="incomingType in incomingTypes" ng-model="cart.incomingType" uib-btn-radio="incomingType.name">
+                    <i class="{{incomingType.icon}}"></i>&nbsp;{{incomingType.name}}
+                </a>
+            </div>
+        </div>
+        <br>
+        <!--
+        <div>
+            <button class="btn btn-primary btn-block btn-lg" ui-sref="cart.payment" ng-disabled="!(cart.items.length)">
+                <i class="fa fa-bars"></i> Go Payment!
+            </button>
+        </div>
+    -->
+        <div>
+            <button class="btn btn-primary btn-block btn-lg" role="button" ng-init="submitted=false" ng-disabled="!(cart.items.length) || submitted" ng-click="placeOrder(); submitted=true"><i class="fa fa-bars"></i> Orders completed!</button>
+        </div>
+    </section>
+</div>
+<div ui-view class="rightside">
+</div>
+
+</div>

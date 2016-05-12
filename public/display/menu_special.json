@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Chicken & Gyoza & Eggroll",
+        "captions": [
+            "Chicken Teriyaki($7.49) + 4pcs Gyoza($2) + Eggroll($2) + Soda($1)",
+            "Spicy chicken instead of chicken - Add $0.50"
+        ],
+        "price": 10.49,
+        "original_price": 12.49,
+        "save": 2.00,
+        "picture": "chicken_gyoza_special.png",
+        "active": false
+    },
+    {
+        "name": "Chicken & Gyoza & Pick One",
+        "captions": [
+            "Chicken Teriyaki($7.49) + 4pcs Gyoza($2) + PickOne($2.50) + Soda($1)",
+            "Spicy chicken instead of chicken - Add $0.50"
+        ],
+        "price": 10.99,
+        "original_price": 12.99,
+        "save": 2.00,
+        "picture": "chicken_gyoza_special.png",
+        "selects": [
+            { "name": "Kimchi", "picture": "", "price": 2.50 },
+            { "name": "Seaweed Salad", "picture": "", "price": 2.50 },
+            { "name": "Roasted Seaweed", "picture": "", "price": 2.50 }
+        ],
+        "active": true
+    },
+    {
+        "name": "Crispy Chicken & Gyoza",
+        "captions": [
+            "Crispy Chicken($8.49) + 4pcs Gyoza($2) + Soda($1)"
+        ],
+        "price": 9.49,
+        "original_price": 11.49,
+        "save": 2.00,
+        "picture": "crispy_gyoza.png",
+        "active": true
+    }
+]

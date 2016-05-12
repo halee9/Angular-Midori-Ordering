@@ -1,0 +1,19 @@
+[
+    { "image": "ChickenTogo.png", "title": "Chicken Teriyaki" },
+    { "image": "BreastTogo.png", "title": "Chicken Breast Teriyaki" },
+    { "image": "Beef.png", "title": "Beef Teriyaki" },
+    { "image": "Ch+Gyoza.png", "title": "Chicken & Gyoza" },
+    { "image": "ChOverFried.png", "title": "Chicken over Fried Rice" },
+    { "image": "Edamame.png", "title": "Edamame" },
+    { "image": "FriedRice.png", "title": "Fried Rice" },
+    { "image": "GeneralGyoza.png", "title": "General Chicken and Gyoza" },
+    { "image": "Gyoza.png", "title": "8 pieces Gyoza" },
+    { "image": "Katsu.png", "title": "Chicken Katsu" },
+    { "image": "Kung.png", "title": "Kung Pao Chicken" },
+    { "image": "Mong.png", "title": "Mongolian Beef" },
+    { "image": "Salmon.png", "title": "Salmon Teriyaki" },
+    { "image": "SideBroccoli.png", "title": "Side Broccoli" },
+    { "image": "Spicy.png", "title": "Spicy Chicken Teriyaki" },
+    { "image": "SPMush.png", "title": "Spicy Chicken Mushroom" },
+    { "image": "Yakisoba.png", "title": "Yakisoba" }
+]

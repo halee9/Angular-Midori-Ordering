@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{label}}:</label>
+    <input type="email" name="{{name}}" ng-model="ngModel" class="form-control" placeholder="{{label}} here">
+    <div class="help-block" ng-messages="form.$error">
+        <p ng-message="email">This needs to be a valid email</p>
+    </div>
+</div>

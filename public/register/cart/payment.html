@@ -1,0 +1,59 @@
+<section class="col-sm-6 col-md-4">
+    <h1 class="underline">
+        <i class="fa fa-shopping-cart"></i> Payment
+    </h1>
+    <div>
+        <div ng-repeat="item in cart.items track by $index" class="clear underline" ng-click="select(item)" ng-class="{disabled: item.payment_completed}">
+            <h4>
+                <span ng-hide="item.payment_selected"><i class="fa fa-square-o"></i></span>
+                <span ng-show="item.payment_selected"><i class="fa fa-check-square-o"></i></span>
+                <strong>{{ item.name }}</strong>
+                <span class="pull-right">{{ item.price | currency }}</span>
+            </h4>
+            <h6>{{ item.modifiers | displayModifiers }}</h6>
+        </div>
+        <!--
+        <div ui-sref="cart.menu" class="text-center underline xs-only">
+            <h4><i class="fa fa-cart-plus"></i> Add Another Item</h4>
+        </div>
+    -->
+        <br>
+    </div>
+    <div>
+        <button class="btn btn-lg" ng-click="revokeAll()"><i class="fa fa-trash"></i> Revoke All</button>
+        <hs-show-totals subtotal="payment.subtotal" tax="payment.tax" total="payment.total" ><hs-show-totals>
+    </div>
+</section>
+<section class="col-sm-6 col-md-4">
+    <div class="clear">
+        <h1 class="underline">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="pull-right">{{payment.total | currency}}</span>
+        </h1>
+        <div class="pull-right text-right">
+            <h4>Received: {{payment.received | currency}}</h4>
+            <h4>Changed: {{payment.changed | currency}}</h4>
+            <h4>Payment Method: {{payment.method}}</h4>
+        </div>
+        <div class="clear btn-group btn-group-justified" role="group">
+            <a type="button" class="btn btn-primary btn-lg" ng-repeat="paymentType in paymentTypes" ng-model="payment.method" uib-btn-radio="paymentType.name">
+                <i class="{{paymentType.icon}}"></i>&nbsp;{{paymentType.name}}
+            </a>
+        </div>
+        <div ng-show="payment.method=='Cash'">
+            <div>
+                <span>Cash Recieved : </span>
+                <!--<input type="text" ng-model="cash_received">-->
+            </div>
+            <button class="btn btn-lg" ng-repeat="cash in cashes" ng-class="{active: ($index==0)}"
+                ng-click="chooseCashAmount(cash)">{{ cash | currency }}</button>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-primary btn-block btn-lg" role="button" ng-init="submitted=false" ng-disabled="submitted" ng-click="paymentDone(); submitted=true"><i class="fa fa-bars"></i> Payment Done</button>
+    </div>
+</section>
+<div ui-view class="col-md-4">
+</div>
+

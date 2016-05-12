@@ -1,0 +1,13 @@
+<div class="alert alert-danger" role="alert" ng-show="message">{{message}}</div>
+<form ng-submit="submit()">
+    <div class="form-group">
+        <input type="email" class="form-control" ng-model="user.email" placeholder="Email">
+        <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Remember me
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+</form>

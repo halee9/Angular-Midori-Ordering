@@ -1,0 +1,11 @@
+<div class="flex-layout">
+    <div class="leftside">
+        <div class="list-group">
+            <a class="list-group-item" ng-repeat="order in orders" ui-sref="orders.order({id:order._id})">
+                {{ order.number }} | {{ order.items[0].abbr }} | {{ order.items.length }}
+            </a>
+        </div>
+    </div>
+    <div ui-view class="rightside">
+    </div>
+</div>

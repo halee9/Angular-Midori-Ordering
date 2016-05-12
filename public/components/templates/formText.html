@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{label}}:</label>
+    <input type="text" name="{{name}}" ng-model="ngModel" ng-minlength="ngMinlength" ng-maxlength="ngMaxlength" class="form-control" placeholder="{{label}} here" ng-required="ngRequired">
+    <div class="help-block" ng-messages="form[name].$error">
+        <div ng-message="required">{{label}} is required.</div>
+    </div>
+</div>

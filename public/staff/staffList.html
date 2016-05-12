@@ -1,0 +1,7 @@
+<div class="list-group">
+    <div>
+        <a class="list-group-item" ng-repeat="staff in staffs" ui-sref="staff.view({id: staff._id})">
+            {{ staff.name }} {{ staff.email }}
+        </a>
+    </div>
+</div>

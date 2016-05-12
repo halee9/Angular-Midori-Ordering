@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+<h3>{{title}}</h3>
+<hr>
+<form name="itemForm" ng-submit="submit(itemForm.$valid)" novalidate>
+    <h4>POS</h4>
+    <hs-form-text label="Name" name="pos_name" ng-model="item.pos.name" form="itemForm"></hs-form-text>
+    <hs-form-text label="Type of item" name="pos_type" ng-model="item.pos.type" form="itemForm"></hs-form-text>
+    <hs-form-text label="Tab Group" name="pos_tabGroup" ng-model="item.pos.tabGroup" form="itemForm"></hs-form-text>
+    <hs-form-text label="Price" name="pos_price" ng-model="item.pos.price" form="itemForm"></hs-form-text>
+    <hs-form-text label="Type of Job" name="pos_job" ng-model="item.pos.job" form="itemForm"></hs-form-text>
+    <hs-form-text label="Rice option" name="pos_rice" ng-model="item.pos.rice" form="itemForm"></hs-form-text>
+    <hs-form-text label="Parent" name="pos_parent" ng-model="item.pos.parent" form="itemForm"></hs-form-text>
+    <hs-form-text label="Priority" name="pos_priority" ng-model="item.pos.priority" form="itemForm"></hs-form-text>
+    <hs-form-boolean label="Kitchen no display" name="pos_noDisplay" ng-model="item.pos.noDisplay" ></hs-form-boolean>
+    <hs-form-text label="Background color" name="pos_backgroundColor" ng-model="item.pos.backgroundColor" form="itemForm"></hs-form-text>
+    <hs-form-text label="Text color" name="pos_textColor" ng-model="item.pos.textColor" form="itemForm"></hs-form-text>
+
+    <hr>
+    <button type="submit" class="btn btn-primary btn-block btn-lg" ng-disabled="itemForm.$invalid">
+        <i class="fa fa-save"></i> {{submitText}}
+    </button>
+    <button type="button" class="btn btn-default btn-block btn-lg" ui-sref="item.list">Back to list</button>
+</form>
+<!--<div ui-view autoscroll></div>-->
+    </div>
+</div>

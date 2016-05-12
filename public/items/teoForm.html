@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+<h3>{{title}}</h3>
+<hr>
+<form name="itemForm" ng-submit="submit(itemForm.$valid)" novalidate>
+    <h4>TEO</h4>
+    <hs-form-text label="ID" name="teo_id" ng-model="item.teo.id" form="itemForm"></hs-form-text>
+    <hs-form-text label="Name" name="teo_name" ng-model="item.teo.name" form="itemForm" ng-required=true></hs-form-text>
+    <hs-form-text label="Short Name" name="teo_short_name" ng-model="item.teo.short_name" form="itemForm"></hs-form-text>
+    <hs-form-text label="Abbreviation" name="teo_abbr_name" ng-model="item.teo.abbr_name" form="itemForm"></hs-form-text>
+    <hs-form-text label="Description" name="teo_description" ng-model="item.teo.description" form="itemForm"></hs-form-text>
+    <hs-form-text label="Picture" name="teo_pic" ng-model="item.teo.pic" form="itemForm"></hs-form-text>
+    <hs-form-text label="Price" name="teo_price" ng-model="item.teo.price" form="itemForm"></hs-form-text>
+    <hs-form-text label="Combination" name="teo_combination" ng-model="item.teo.combination" form="itemForm"></hs-form-text>
+    <hs-form-text label="Options" name="teo_options" ng-model="item.teo.options" form="itemForm"></hs-form-text>
+    <hs-form-text label="Is it spicy" name="teo_is_spicy" ng-model="item.teo.is_spicy" form="itemForm"></hs-form-text>
+    <hs-form-text label="Option display" name="teo_option_display" ng-model="item.teo.option_display" form="itemForm"></hs-form-text>
+    <hs-form-text label="Spicy option" name="teo_spicy_option" ng-model="item.teo.spicy_option" form="itemForm"></hs-form-text>
+    <hs-form-text label="Breast Option" name="teo_breast_option" ng-model="item.teo.breast_option" form="itemForm"></hs-form-text>
+    <hs-form-text label="Extra Option" name="teo_extra_option" ng-model="item.teo.extra_option" form="itemForm"></hs-form-text>
+    <hs-form-text label="Extra Code" name="teo_extra_code" ng-model="item.teo.extra_code" form="itemForm"></hs-form-text>
+    <hs-form-text label="Sold Out" name="teo_soldout" ng-model="item.teo.soldout" form="itemForm"></hs-form-text>
+    <hs-form-text label="Type of Job" name="teo_job" ng-model="item.teo.job" form="itemForm"></hs-form-text>
+
+    <hr>
+    <button type="submit" class="btn btn-primary btn-block btn-lg" ng-disabled="itemForm.$invalid">
+        <i class="fa fa-save"></i> {{submitText}}
+    </button>
+    <button type="button" class="btn btn-default btn-block btn-lg" ui-sref="item.list">Back to list</button>
+</form>
+<!--<div ui-view autoscroll></div>-->
+    </div>
+</div>

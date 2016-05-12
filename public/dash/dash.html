@@ -1,0 +1,34 @@
+<div class="text-center">
+    <h4 class="text-center">
+        <span ng-click="yesterday()"> << </span>
+        <span ng-click="today()">{{ date }}</span>
+        <span ng-click="tomorrow()"> >> </span>
+    </h4>
+    <h1>{{ hours[hours.length-1].total | currency }}</h1>
+</div>
+
+<table class="table table-striped">
+    <tr class="text-center">
+        <th>Hour</th>
+        <th>Gross</th>
+        <th>Subtotal</th>
+    </tr>
+    <tr ng-repeat="hour in hours">
+        <td class="text-center">{{ hour._id }}</td>
+        <td class="text-right">{{ hour.total | currency }}</td>
+        <td class="text-right">{{ hour.subtotal | currency }}</td>
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <tr class="text-center">
+        <th>Item</th>
+        <th>Count</th>
+        <th>Total</th>
+    </tr>
+    <tr ng-repeat="item in salesByItems">
+        <td>{{ item._id }}</td>
+        <td class="text-right">{{ item.count }}</td>
+        <td class="text-right">{{ item.total | currency }}</td>
+    </tr>
+</table>

@@ -1,0 +1,26 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4 class="text-center">{{ staff.name }}</h4>
+    </div>
+    <div class="panel-body">
+        <p>Name: {{ staff.name }}</p>
+        <p>Email: {{ staff.email }}</p>
+        <p>Phone: {{ staff.phone }}</p>
+        <p>Passcode: {{ staff.passcode }}</p>
+        <p>Active: {{ staff.active }}</p>
+    </div>
+    <a ui-sref="staff.update({id: staff._id})" class="btn btn-warning btn-block">Modify</a>
+    <hr>
+    <table class="table">
+        <tr>
+            <th>Clock</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr ng-repeat="clock in staff.clocks | orderBy:'-date'">
+            <td>{{clock.type}}</td>
+            <td>{{clock.date | date: 'yyyy/MM/dd'}}</td>
+            <td>{{clock.date | date: 'hh:mm a'}}</td>
+        </tr>
+    </table>
+</div>

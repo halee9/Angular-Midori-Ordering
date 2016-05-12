@@ -1,0 +1,41 @@
+<div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+    <section>
+        <h1 class="underline">
+            <i class="fa fa-file"></i> #{{order.number}}
+            <span class="pull-right">Receipt</span>
+        </h1>
+        <div>
+            <div ng-hide="order.items[0]" class="text-center underline">
+                <h4>No item in the cart!</h4>
+            </div>
+            <div ng-repeat="item in order.items track by $index" ng-class="{success: item.selected}" ui-sref="register.modifier({itemId: item._id})" class="clear underline full">
+                <h4>
+                    <strong>{{ item.name }}</strong>
+                    <span class="pull-right">{{ item.price | currency }}</span>
+                </h4>
+                <div class="pull-right" ng-bind-html="item | showModifiers"></div>
+            </div>
+            <div ui-sref="register" class="text-center underline xs-only">
+                <h4><i class="fa fa-cart-plus"></i> Add Another Item</h4>
+            </div>
+            <br>
+        </div>
+        <div>
+            <div class="pull-right text-right total_container">
+                <div>
+                    <span>Subtotal:</span>
+                    <span>{{order.subtotal | currency}}</span>
+                </div>
+                <div>
+                    <span>Tax:</span>
+                    <span>{{order.tax | currency}}</span>
+                </div>
+                <div>
+                    <span>Total:</span>
+                    <span>{{order.total | currency}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button ng-click="going_next()">Keep going</button>
+</div>

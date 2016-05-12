@@ -1,0 +1,14 @@
+<div class="menu">
+	<div ng-repeat="category in categories">
+		<h6 class="category-name">{{category.name}}</h6>
+		<div class="menu-row">
+			<div ng-repeat="item in items | itemsByCategory:category.name" class="menu-item"
+			ng-init="item.selected=false" ng-click="setNewItemInCart(item); item.selected=true;"
+			ng-class="{selected: item.selected, unselected: !item.selected}">
+				<h4 class="text-center text-nowrap">{{ item.abbr }}</h4>
+				<h6 class="text-center">{{ item.price | currency }}</h6>
+				<h6 class="text-center">{{ item.name }}</h6>
+			</div>
+		</div>
+	</div>
+</div>

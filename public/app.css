@@ -1,0 +1,7 @@
+table th {
+    text-align: center;
+}
+
+.list-group-item {
+    overflow: hidden;
+}

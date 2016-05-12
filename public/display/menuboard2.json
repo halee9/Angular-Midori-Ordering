@@ -1,0 +1,70 @@
+[
+    {
+        "gname": "TERIYAKI",
+        "menus": [
+            { "name": "Chicken", "price": "7.49", "sku": "MT01" },
+            { "name": "Spicy Chicken", "price": "7.99", "sku": "MT02" },
+            { "name": "Chicken Breast", "price": "8.49", "sku": "MT03" },
+            { "name": "Beef", "price": "8.99", "sku": "MT04" },
+            { "name": "Pork", "price": "8.99", "sku": "MT05" },
+            { "name": "Salmon", "price": "10.99", "sku": "MT06"},
+            { "name": "Divider" },
+            { "name": "Chicken & Gyoza", "price": "8.99", "sku": "MC01" },
+            { "name": "Chicken & Beef", "price": "9.49", "sku": "MC02" },
+            { "name": "Chicken & Pork", "price": "9.49", "sku": "MC03" },
+            { "name": "Chicken & Katsu", "price": "9.49", "sku": "MC04" }
+        ]
+    },
+    {
+        "gname": "STIR-FRY & WOK",
+        "menus": [
+            { "name": "Spicy Chicken & Mushroom", "price": "8.49" },
+            { "name": "Chicken & Broccoli", "price": "8.49" },
+            { "name": "Kung Pao Chicken", "price": "8.49" },
+            { "name": "Mongolian Beef", "price": "8.99" },
+            { "name": "General Tso Chicken", "price": "8.49"},
+            { "name": "Divider" },
+            { "name": "Yakisoba", "price": "8.49"},
+            { "name": "Fried Rice", "price": "8.49"},
+            { "name": "Veggie Stir-Fry", "price": "8.49"}
+        ]
+    },
+    {
+        "gname": "DEEP FRY",
+        "link": true,
+        "menus": [
+            { "name": "Crispy Chicken", "price": "8.49", "sku": "MD01" },
+            { "name": "Chicken Katsu", "price": "8.99", "sku": "MD02" },
+            { "name": "Gyoza Plate", "price": "7.49", "sku": "MD03"}
+        ]
+    },
+    {
+        "gname": "SIDE",
+        "link": true,
+        "menus": [
+            { "name": "8pcs Gyoza", "price": "3.99" },
+            { "name": "2pcs Egg Roll", "price": "3.99" },
+            { "name": "Broccoli", "price": "2.99" },
+            { "name": "Edamame", "price": "3.49"}
+        ]
+    },
+    {
+        "gname": "BOWL",
+        "menus": [
+            { "name": "Chicken Bowl", "price": "4.99" },
+            { "name": "Beef Bowl", "price": "5.49" },
+            { "name": "Pork Bowl", "price": "5.49" }
+        ]
+    },
+    {
+        "gname": "ADD ON",
+        "menus": [
+            { "name": "4pcs Gyoza", "price": "2.00" },
+            { "name": "1pc Egg Roll", "price": "2.00" },
+            { "name": "Extra Meat", "price": "3.50" },
+            { "name": "Extra Veggie", "price": "2.00" },
+            { "name": "Noodle or Tofu", "price": "2.50"},
+            { "name": "Brown Rice", "price": "0.50" }
+        ]
+    }
+]

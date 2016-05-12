@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+
+<h3>{{title}}</h3>
+<hr>
+<form name="itemForm" ng-submit="submit(itemForm.$valid)" novalidate>
+    <hs-form-text label="SKU" name="sku" ng-model="item.sku" form="itemForm"></hs-form-text>
+    <hs-form-text label="Name" name="name" ng-model="item.name" form="itemForm" ng-required=true></hs-form-text>
+    <hs-form-text label="Abbreviation" name="abbr" ng-model="item.abbr" form="itemForm"></hs-form-text>
+    <hs-form-text label="Price" name="price" ng-model="item.price" form="itemForm" ng-required=true></hs-form-text>
+    <hs-form-text label="Description" name="description" ng-model="item.description" form="itemForm"></hs-form-text>
+    <div class="form-group">
+        <label>Photo: </label>
+        <div>
+            {{item.image}}
+            <input class="btn btn-primary" type="button" value="Select" ui-sref="item.photos" ng-click="select(item)" ng-init="inEdit=true">
+        </div>
+        <div class="thumbnail">
+          <img src="img/{{ item.image }}" alt="{{ item.image }}">
+        </div>
+    </div>
+    <hs-checkbox label="Category" list="categories" selected="item.categories"></hs-checkbox>
+    <hs-checkbox label="Cooking Methods" list="cookingMethods" selected="item.cookingMethods"></hs-checkbox>
+    <hs-checkbox label="Portion" list="portions" selected="item.portion"></hs-checkbox>
+    <hs-checkbox label="Ingredients" list="ingredients" selected="item.ingredients"></hs-checkbox>
+    <hs-checkbox label="Modifiers" list="modifiers" selected="item.modifiers"></hs-checkbox>
+
+    <hr>
+    <button type="submit" class="btn btn-primary btn-block btn-lg" ng-disabled="itemForm.$invalid">
+        <i class="fa fa-save"></i> {{submitText}}
+    </button>
+    <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="delete()" ng-show="item._id">
+        <span ng-hide="remove">Delete this item</span>
+        <span ng-show="remove">Are you really remove this?</span>
+    </button>
+    <button type="button" class="btn btn-default btn-block btn-lg" ui-sref="item.list">Back to list</button>
+</form>
+<!--<div ui-view autoscroll></div>-->
+    </div>
+</div>

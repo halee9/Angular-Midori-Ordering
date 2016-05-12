@@ -1,0 +1,9 @@
+<div class="alert alert-success" role="alert">
+    <span>{{message}}</span>
+    <a class="pull-right" ng-hide="username" ng-click="login()">Log in</a>
+    <a class="pull-right" ng-show="username" ng-click="logout()">Logout</a>
+</div>
+<div class="list-group">
+    <a ui-sref="dash.daily" class="list-group-item">Dashboard</a>
+    <a ui-sref="item.list" class="list-group-item">Item Management</a>
+</div>

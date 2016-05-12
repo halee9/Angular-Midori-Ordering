@@ -1,0 +1,57 @@
+<div class="col-sm-6 col-md-5">
+	<div>
+		<!--<img ng-src="../img/slider/{{item.image}}" class="img-responsive" ng-show="item.image">-->
+        <h1>
+            <i class="fa fa-pencil"></i> Total
+            <span class="pull-right">{{item.price | currency}}</span>
+        </h1>
+		<h4>
+			<div ng-bind-html="item | showItemDetail"></div>
+		</h4>
+	</div>
+	<br>
+	<div class="text-center clear">
+		<button class="btn btn-lg" ng-click="reset()"><i class="fa fa-undo"></i> Reset</button>
+	</div>
+</div>
+<div class="col-sm-6 col-md-5">
+	<div ng-repeat="modifier in item.modifiers" ng-if="(modifier.type == 'A')">
+		<div>
+			<span>{{modifier.name}} : </span>
+			<span class="pull-right">{{modifier.selects[modifier.selected].name}}</span>
+		</div>
+		<div class="btn-group btn-block btn-group-justified" role="group">
+			<a class="btn btn-primary" ng-repeat="select in modifier.selects" ng-model="modifier.selected" uib-btn-radio="{{$index}}">
+				<h4 class="text-center">{{ select.abbr }}</h4>
+				<h6 class="text-center">{{ select.price | currency }}</h6>
+			</a>
+		</div>
+	</div>
+	<br>
+
+	<ul class="list-group" ng-repeat="modifier in item.modifiers" ng-if="(modifier.type == 'B')">
+		<li class="list-group-item clear full" ng-repeat="select in modifier.selects">
+			<div ng-show="(select.qty==0)">
+				<div class="pull-left">
+					<h4>{{ select.name }}</h4>
+					<h6>{{select.price | currency}}</h6>
+				</div>
+				<h4 class="pull-right" ng-click="addon(select)">ADD</h4>
+			</div>
+			<div ng-show="(select.qty>0)">
+				<div class="pull-left">
+					<h4>{{ select.name }}
+						<span> X {{ select.qty }}</span>
+					</h4>
+					<h6>{{select.price | currency}}</h6>
+				</div>
+				<h4 class="pull-right">
+					<span ng-click="addOne(select)"><i class="fa fa-plus-square fa-2x"></i></span>
+					<span ng-click="subtractOne(select)"><i class="fa fa-minus-square fa-2x"></i></span>
+				</h4>
+			</div>
+		</li>
+	</ul>
+</div>
+
+

@@ -1,0 +1,105 @@
+[
+	{ "colume":
+		[
+			{
+				"gname": "TERIYAKI",
+				"menus": [
+					{ "name": "Chicken", "price": "7.49", "sku": "MT01", "ranking": 2 },
+					{ "name": "Spicy Chicken", "price": "7.99", "sku": "MT02", "spicy": true, "ranking": 1 },
+					{ "name": "Chicken Breast", "price": "8.49", "sku": "MT03" },
+					{ "name": "Beef", "price": "9.49", "sku": "MT04" },
+					{ "name": "Pork", "price": "8.99", "sku": "MT05" },
+					{ "name": "Salmon", "price": "10.99", "sku": "MT06"}
+				]
+			},
+			{
+				"gname": "DEEP-FRY",
+				"menus": [
+					{ "name": "Crispy Chicken", "price": "8.49", "sku": "MD01", "ranking": 4 },
+					{ "name": "Chicken Katsu", "price": "8.99", "sku": "MD02" },
+					{ "name": "Gyoza Plate", "price": "7.49", "sku": "MD03"}
+				]
+			}
+		]
+	},
+	{ "colume":
+		[
+			{
+				"gname": "STIR-FRY",
+				"menus": [
+					{ "name": "Yakisoba", "price": "8.49", "ranking": 3 },
+					{ "name": "Fried Rice", "price": "8.49" },
+					{ "name": "Veggie Stir-Fry", "price": "8.49", "ranking": 6 },
+					{ "name": "Caption", "caption": "Choose your protain:" },
+					{ "name": "Caption", "caption": "Chicken | Tofu | Veggie - 8.49" },
+					{ "name": "Caption", "caption": "Beef | Pork - 9.49" },
+					{ "name": "Caption", "caption": "Shrimp - 10.49" }
+				]
+			},
+			{
+				"gname": "CHINESE WOK",
+				"menus": [
+					{ "name": "General Tso Chicken", "price": "8.99", "ranking": 5},
+					{ "name": "Spicy Chicken & Mush-room", "price": "8.49", "spicy": true },
+					{ "name": "Chicken & Broccoli", "price": "8.49" },
+					{ "name": "Mongolian Beef", "price": "9.99" },
+					{ "name": "Kung Pao Chicken", "price": "8.49", "spicy": true }
+				]
+			}
+		]
+	},
+	{ "colume":
+		[
+			{
+				"gname": "ADD-ON",
+				"menus": [
+					{ "name": "Gyoza", "price": "2.00", "caption": "4pcs" },
+					{ "name": "Egg Roll", "price": "2.00" },
+					{ "name": "Extra Chicken", "price": "3.50" },
+					{ "name": "Extra Pork", "price": "3.50" },
+					{ "name": "Extra Beef", "price": "4.50" },
+					{ "name": "Extra Shrimp", "price": "3.50" },
+					{ "name": "Extra Veggie", "price": "2.00" },
+					{ "name": "Noodle | Tofu", "price": "2.50"}
+				]
+			},
+			{
+				"gname": "RICE OPTION",
+				"menus": [
+					{ "name": "Brown Rice", "price": "0.50", "caption": "Substitution" },
+					{ "name": "Fried Rice", "price": "2.00", "caption": "Substitution" },
+					{ "name": "Side White Rice", "price": "2.00" },
+					{ "name": "Side Brown Rice", "price": "2.50" }
+				]
+			}
+		]
+	},
+	{ "colume":
+		[
+			{
+				"gname": "SIDE",
+				"menus": [
+					{ "name": "Gyoza", "price": "3.99", "caption": "8pcs" },
+					{ "name": "Egg Roll", "price": "3.99", "caption": "2pcs" },
+					{ "name": "Kimchi", "price": "2.49", "spicy": true },
+					{ "name": "Seaweed Salad", "price": "2.49" },
+					{ "name": "Roasted Seaweed", "price": "2.49" },
+					{ "name": "Broccoli", "price": "2.99" },
+					{ "name": "Edamame", "price": "3.49"}
+				]
+			},
+			{
+				"gname": "VEGETARIAN & TOFU",
+				"menus": [
+					{ "name": "Yakisoba Tofu", "price": "8.49" },
+					{ "name": "Fried Rice Tofu", "price": "8.49" },
+					{ "name": "Veggie Stir-Fry Tofu", "price": "8.49" },
+					{ "name": "Spicy Tofu Mushroom", "price": "8.49", "spicy": true },
+					{ "name": "Kung Pao Tofu", "price": "8.49", "spicy": true },
+					{ "name": "Broccoli Tofu", "price": "8.49" },
+					{ "name": "Teriyaki Tofu", "price": "7.49" }
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', '-g', 'bower' ]
+2 info using npm@2.1.14
+3 info using node@v0.10.34
+4 silly mapToRegistry name bower
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/bower
+8 verbose request uri https://registry.npmjs.org/bower
+9 verbose request no auth needed
+10 info attempt registry request try #1 at 15:47:35
+11 verbose request id 9cd9c0750f745586
+12 http request GET https://registry.npmjs.org/bower
+13 http 200 https://registry.npmjs.org/bower
+14 silly get cb [ 200,
+14 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+14 silly get     etag: '"42C9WESJFE6XMC6MM1FQUNLUJ"',
+14 silly get     'content-type': 'application/json',
+14 silly get     'cache-control': 'max-age=300',
+14 silly get     'content-length': '168818',
+14 silly get     'accept-ranges': 'bytes',
+14 silly get     date: 'Sat, 30 Jan 2016 23:47:37 GMT',
+14 silly get     via: '1.1 varnish',
+14 silly get     age: '194',
+14 silly get     connection: 'keep-alive',
+14 silly get     'x-served-by': 'cache-sjc3122-SJC',
+14 silly get     'x-cache': 'HIT',
+14 silly get     'x-cache-hits': '1',
+14 silly get     'x-timer': 'S1454197657.247438,VS0,VE1',
+14 silly get     vary: 'Accept' } ]
+15 verbose type called_on_non_object
+16 verbose stack TypeError: Object.keys called on non-object
+16 verbose stack     at Function.keys (native)
+16 verbose stack     at unmarkExtraneous (/usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:362:10)
+16 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:137:5
+16 verbose stack     at next (/usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:185:14)
+16 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:169:14
+16 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:108:15)
+17 verbose cwd /Users/halee/MEAN/midori
+18 error Darwin 14.5.0
+19 error argv "node" "/usr/local/bin/npm" "update" "-g" "bower"
+20 error node v0.10.34
+21 error npm  v2.1.14
+22 error Object.keys called on non-object
+23 error If you need help, you may report this error at:
+23 error     <http://github.com/npm/npm/issues>
+24 verbose exit [ 1, true ]

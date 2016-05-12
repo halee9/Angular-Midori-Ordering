@@ -1,0 +1,43 @@
+<section class="col-sm-6 col-md-4">
+    <h3 class="underline">
+        <i class="fa fa-user"></i> Customer Infomation
+    </h3>
+    <div class="form-group">
+        <label>Cutomer Name :</label>
+        <input class="form-control" type="text" ng-model="cart.username">
+    </div>
+</section>
+<section class="col-sm-6 col-md-4">
+    <h3 class="underline">
+        <i class="fa fa-clock-o"></i> Pickup Time
+    </h3>
+    <h2>
+        <table class="text-center">
+            <tr>
+                <td ng-click="addHour()"><i class="fa fa-plus-square"></i></td>
+                <td></td>
+                <td ng-click="addMinuates()"><i class="fa fa-plus-square"></i></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>{{ time.hours }}</td>
+                <td>:</td>
+                <td>{{ time.minuates }}</td>
+                <td>{{ time.ampm }}</td>
+            </tr>
+            <tr>
+                <td ng-click="subtractHour()"><i class="fa fa-minus-square"></i></td>
+                <td></td>
+                <td ng-click="subtractMinuates()"><i class="fa fa-minus-square"></i></td>
+                <td></td>
+            </tr>
+        </table>
+    </h2>
+    <div>
+        <button class="btn btn-lg" ng-click="set_time()">Set time</button>
+        <button class="btn btn-lg" ng-click="clear_time()">Clear time</button>
+    </div>
+    <br>
+    <button ui-sref="cart.menu" class="btn btn-lg btn-block btn-primary">Close</button>
+</section>
+

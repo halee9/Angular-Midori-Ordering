@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+  background-color: #eee;
+  font-family: 'PT Sans', sans-serif;
+  padding-bottom: 70px;
+  height: 100%;
+}
+
+.selected {
+  background-color: yellow;
+}
+.unselected {
+  background-color: white;
+}
+/*
+.small-screen {
+  display: none;
+}
+.normal-screen {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .small-screen {
+    display: block;
+  }
+  .normal-screen {
+    display: none;
+  }
+}
+
+.scrollable {
+  height: 300px;
+  overflow: auto;
+}
+*/
+
+/* Common */
+
+h4, h6 {
+  margin: 5px 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.full {
+  overflow: hidden;
+}
+
+.padding{
+  padding: 5px 0;
+}
+
+.underline {
+  border-bottom: 1px dashed #aaa;
+}
+
+.big_font {
+  font-size: 200%;
+}
+/* Flex Container */
+
+.flex-layout {
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+}
+.leftside, .rightside {
+  flex: 1 100%;
+  overflow-y: scroll;
+}
+
+.menu-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu-item {
+  min-width: 100px;
+  max-width: 100px;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  padding: 5px;
+  margin: 2px;
+  flex-grow: 1;
+  border-radius: 6px;
+}
+
+.menu-item > * {
+  margin: 5px 0;
+}
+
+.category-name {
+  margin: 0;
+  padding: 3px;
+}
+
+.leftside {
+  min-width: 320px;
+  padding: 10px;
+  background-color: #fff;
+}
+.rightside {
+  padding: 10px;
+}
+/*
+.aside {
+  min-width: 320px;
+  padding: 10px;
+}
+*/
+@media all and (min-width: 700px) {
+  .leftside {
+    flex: 1 1 0;
+  }
+  .rightside {
+    flex: 2 1 0;
+    display: block !important;
+  }
+  .xs-only {
+    display: none;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .leftside {
+    flex: 1 10px;
+  }
+  .rightside {
+    flex: 3 10px;
+    display: block !important;
+  }
+  .xs-only {
+    display: none;
+  }
+}
+
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 320px;
+  padding: 10px;
+}
+
+.disabled {
+    z-index: 1000;
+    background-color: lightgrey;
+    opacity: 0.6;
+    pointer-events: none;
+}

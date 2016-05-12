@@ -1,0 +1,27 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h4 class="text-center">{{ item.name }}</h4>
+        <span>{{ item.abbr }}</span>
+        <span class="pull-right">{{ item.price | currency }}</span>
+    </div>
+    <div class="panel-body">
+        <p>{{ item.description }}</p>
+    </div>
+    <table class="table">
+        <tr>
+            <td width="20%">Category:</td>
+            <td colspan="3">
+                <div ng-repeat="c in item.categories"><strong>{{ c.name }}</strong></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Modifier:</td>
+            <td colspan="3">
+                <div ng-repeat="m in item.modifiers">
+                    <strong>{{ m.name }}</strong>
+                    <li ng-repeat="select in m.selects">{{ select.name }} - {{ select.price | currency }}</li>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

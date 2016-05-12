@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <h3>{{ store.name }}</h3>
+        <p>{{ store.address1 }}</p>
+        <p>{{ store.address2 }}</p>
+        <p>{{ store.phone }}</p>
+    </div>
+    <div>
+        <div ng-repeat="item in payment.items">
+            <div class="pull-right" ng-bind-html="item | showModifiers"></div>
+        </div>
+        <hs-show-totals subtotal="payment.subtotal" tax="payment.tax" total="payment.total" ><hs-show-totals>
+    </div>
+
+</div>

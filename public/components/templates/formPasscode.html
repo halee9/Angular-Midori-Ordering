@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{label}}:</label>
+    <input type="text" name="{{name}}" ng-model="ngModel" ng-pattern="pattern" class="form-control" placeholder="{{label}} 4-digit here" ng-required="true">
+    <div class="help-block" ng-messages="form.$error">
+        <div ng-message="pattern">Example: 1234 or 7656</div>
+    </div>
+</div>
